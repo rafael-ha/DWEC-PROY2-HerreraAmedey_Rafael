@@ -10,6 +10,15 @@ const portfolio = () => {
                     <a href="https://github.com/rafael-ha/DWEC-PROY1-Herrera_Amedey_Rafael">
                         <img src="https://gh-card.dev/repos/rafael-ha/DWEC-PROY1-Herrera_Amedey_Rafael.svg?fullname=" />
                     </a>
+                    <hr />
+                    <a href="https://github.com/rafael-ha/Proyecto_LandingPage">
+                        <img src="https://gh-card.dev/repos/rafael-ha/Proyecto_LandingPage.svg?fullname=" />
+
+                    </a>
+                    <hr />
+                    <a href="https://github.com/rafael-ha/laravel">
+                        <img src="https://gh-card.dev/repos/rafael-ha/laravel.svg?fullname=" />
+                    </a>
                 </div>
             </div>
         </section>

@@ -21,17 +21,7 @@
 
   	}, 100);
 
-
-	/*---------------------------------------------------- */
-	/* FitVids
-	------------------------------------------------------ */ 
-  	$(".fluid-video-wrapper").fitVids();
-
-
-	/*---------------------------------------------------- */
-	/* Owl Carousel
-	------------------------------------------------------ */ 
-	$("#owl-slider").owlCarousel({
+	/*$("#owl-slider").owlCarousel({
         navigation: false,
         pagination: true,
         itemsCustom : [
@@ -40,7 +30,7 @@
 	        [960, 3]
 	     ],
         navigationText: false
-    });
+    });*/
 
 
 	/*----------------------------------------------------- */
@@ -49,57 +39,6 @@
 	$('.alert-box').on('click', '.close', function() {
 	  $(this).parent().fadeOut(500);
 	});	
-
-
-	/*----------------------------------------------------- */
-	/* Stat Counter
-  	------------------------------------------------------- */
-   var statSection = $("#stats"),
-       stats = $(".stat-count");
-
-   statSection.waypoint({
-
-   	handler: function(direction) {
-
-      	if (direction === "down") {       		
-
-			   stats.each(function () {
-				   var $this = $(this);
-
-				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-				   	duration: 4000,
-				   	easing: 'swing',
-				   	step: function (curValue) {
-				      	$this.text(Math.ceil(curValue));
-				    	}
-				  	});
-				});
-
-       	} 
-
-       	// trigger once only
-       	this.destroy();      	
-
-		},
-			
-		offset: "90%"
-	
-	});	
-
-
-	/*---------------------------------------------------- */
-	/*	Masonry
-	------------------------------------------------------ */
-	var containerProjects = $('#folio-wrapper');
-
-	containerProjects.imagesLoaded( function() {
-
-		containerProjects.masonry( {		  
-		  	itemSelector: '.folio-item',
-		  	resize: true 
-		});
-
-	});
 
 
 	/*----------------------------------------------------*/
@@ -124,7 +63,7 @@
 	/*-----------------------------------------------------*/
   	/* Navigation Menu
    ------------------------------------------------------ */  
-   var toggleButton = $('.menu-toggle'),
+   let toggleButton = $('.menu-toggle'),
        nav = $('.main-navigation');
 
    // toggle button

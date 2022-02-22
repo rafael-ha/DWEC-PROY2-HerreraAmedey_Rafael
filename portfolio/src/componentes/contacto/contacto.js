@@ -1,31 +1,36 @@
-import React from "react";
+import React, { useRef }from "react";
+import emailjs from '@emailjs/browser';
 
-const contacto = () => {
+const Contacto = () => {
+    const form = useRef();
+    const sendEmail = (e) =>{
+        e.preventDefault();
+        emailjs.sendForm('service_5tng87g', 'template_pngcg0e', form.current, 'user_iSQ9Nwz2r4GQ3fCAHli4Z')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+    }
+
     return (
         <section id="contact">
             <div className="row section-intro">
                 <div className="col-twelve">
-                    <h5>Contact</h5>
-                    <h1>I'd Love To Hear From You.</h1>
-                    <p className="lead">
-                        Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing
-                        dolore officia nisi aliqua incididunt Ut veniam lorem ipsum
-                        Consectetur ut in in eu do.
-                    </p>
+                    <h5>Contacto</h5>
+                    <h1>¡Contáctame!</h1>
                 </div>
-            </div>{" "}
-            {/* /section-intro */}
+            </div>
             <div className="row contact-form">
                 <div className="col-twelve">
-                    {/* form */}
-                    <form name="contactForm" id="contactForm" method="post" action="">
+                    <form name="contactForm" id="contactForm" ref={form} onSubmit={sendEmail}>
                         <fieldset>
                             <div className="form-field">
                                 <input
                                     name="contactName"
                                     type="text"
                                     id="contactName"
-                                    placeholder="Name"
+                                    placeholder="Nombre"
                                     defaultValue=""
                                     minLength={2}
                                     required=""
@@ -46,7 +51,7 @@ const contacto = () => {
                                     name="contactSubject"
                                     type="text"
                                     id="contactSubject"
-                                    placeholder="Subject"
+                                    placeholder="Asunto"
                                     defaultValue=""
                                 />
                             </div>
@@ -54,7 +59,7 @@ const contacto = () => {
                                 <textarea
                                     name="contactMessage"
                                     id="contactMessage"
-                                    placeholder="message"
+                                    placeholder="Mensaje"
                                     rows={10}
                                     cols={50}
                                     required=""
@@ -62,9 +67,9 @@ const contacto = () => {
                                 />
                             </div>
                             <div className="form-field">
-                                <button className="submitform">Submit</button>
+                                <button className="submitform" type="submit">Enviar</button>
                                 <div id="submit-loader">
-                                    <div className="text-loader">Sending...</div>
+                                    <div className="text-loader">Enviando...</div>
                                     <div className="s-loader">
                                         <div className="bounce1" />
                                         <div className="bounce2" />
@@ -73,62 +78,17 @@ const contacto = () => {
                                 </div>
                             </div>
                         </fieldset>
-                    </form>{" "}
-                    {/* Form End */}
-                    {/* contact-warning */}
-                    <div id="message-warning"></div>
-                    {/* contact-success */}
+                    </form>
+                    <div id="message-warning">Algo fue mal.. Intentelo de nuevo.</div>
                     <div id="message-success">
                         <i className="fa fa-check" />
-                        Your message was sent, thank you!
+                        Tu mensaje ha sido enviado correctamente.
                         <br />
                     </div>
-                </div>{" "}
-                {/* /col-twelve */}
-            </div>{" "}
-            {/* /contact-form */}
-            <div className="row contact-info">
-                <div className="col-four tab-full">
-                    <div className="icon">
-                        <i className="icon-pin" />
-                    </div>
-                    <h5>Where to find me</h5>
-                    <p>
-                        1600 Amphitheatre Parkway
-                        <br />
-                        Mountain View, CA
-                        <br />
-                        94043 US
-                    </p>
                 </div>
-                <div className="col-four tab-full collapse">
-                    <div className="icon">
-                        <i className="icon-mail" />
-                    </div>
-                    <h5>Email Me At</h5>
-                    <p>
-                        someone@kardswebsite.com
-                        <br />
-                        info@kardswebsite.com
-                    </p>
-                </div>
-                <div className="col-four tab-full">
-                    <div className="icon">
-                        <i className="icon-phone" />
-                    </div>
-                    <h5>Call Me At</h5>
-                    <p>
-                        Phone: (+63) 555 1212
-                        <br />
-                        Mobile: (+63) 555 0100
-                        <br />
-                        Fax: (+63) 555 0101
-                    </p>
-                </div>
-            </div>{" "}
-            {/* /contact-info */}
+            </div>
         </section>
     )
 }
 
-export default contacto;
+export default Contacto;
