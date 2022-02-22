@@ -353,7 +353,7 @@ th:last-child, td:last-child {
  * -------------------------------------------------------------------
  */
 button, .button {
-	margin-bottom: 1.2;
+	margin-bottom: 1.2rem;
 }
 fieldset {
 	margin-bottom: 1.5rem;
@@ -1096,7 +1096,7 @@ header .row {
 header .top-bar {
 	display: block;
 	background: #000000;
-	min-width: 220px;
+	min-width: 80px;
 	min-height: 66px;
 	position: absolute;
 	left: 90px;

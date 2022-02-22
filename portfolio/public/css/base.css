@@ -1,25 +1,3 @@
-/**
- * =================================================================== 
- *
- *  Kards v1.0 Base Stylesheet
- *  url: styleshout.com
- *  03-01-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. reset
- *  02. basic/base setup styles
- *  03. grid
- *  04. MISC
- *
- * =================================================================== 
- */
-
-/** 
- * ===================================================================
- * 01. reset - normalize.css v3.0.2 | MIT License | git.io/normalize
- *
- * ------------------------------------------------------------------- 
- */
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -269,7 +247,7 @@ body {
 body,
 input,
 button {
-	-moz-osx-font-smoothing: grayscale;
+	-webkit-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -317,7 +295,6 @@ h4,
 h5,
 h6 {
 	-webkit-font-variant-ligatures: common-ligatures;
-	-moz-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
 	text-rendering: optimizeLegibility;
 }
@@ -867,5 +844,3 @@ textarea {
 	margin-right: auto;
 	text-align: center;
 }
-
-/*# sourceMappingURL=base.css.map */
