@@ -1,4 +1,5 @@
-import react from "react";
+import React from "react";
+
 const footer = () => {
     return (
         <footer>
@@ -6,27 +7,22 @@ const footer = () => {
                 <div className="col-six tab-full pull-right social">
                     <ul className="footer-social">
                         <li>
-                            <a href="#">
-                                <i className="fa fa-facebook" />
+                            <a href="https://www.linkedin.com/in/rafael-herrera-amedey/">
+                                <i className="fa fa-linkdin" />
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i className="fa fa-behance" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <a href="twitter.com">
                                 <i className="fa fa-twitter" />
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i className="fa fa-dribbble" />
+                            <a href="https://github.com/rafael-ha">
+                                <i className="fa fa-github" />
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="instagram.com">
                                 <i className="fa fa-instagram" />
                             </a>
                         </li>
