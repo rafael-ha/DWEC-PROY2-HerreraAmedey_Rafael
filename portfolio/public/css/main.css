@@ -709,8 +709,8 @@ header .row {
 header .top-bar {
 	display: block;
 	background: #000000;
-	min-width: 80px;
-	min-height: 66px;
+	min-width: 220px;
+	min-height: 80px;
 	position: absolute;
 	left: 90px;
 	top: 0;
@@ -722,7 +722,7 @@ header .logo {
 	margin-top: 25px;
 	position: relative;
 }
-header .logo a {
+header a {
 	display: block;
 	margin: 0;
 	padding: 0;

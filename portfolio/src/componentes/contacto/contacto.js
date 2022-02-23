@@ -22,14 +22,22 @@ const Contacto = () => {
         })
             .then((result) => {
                 sLoader.fadeIn();
-                sLoader.fadeOut();
-                $('#message-warning').hide();
-                $('#contactForm').fadeOut();
-                $('#message-success').fadeIn();
-                console.log(result.text);
+                if (result.text === 'OK') {
+                    sLoader.fadeOut();
+                    $('#message-warning').hide();
+                    $('#contactForm').fadeOut();
+                    $('#message-success').fadeIn();
+                    console.log(result.text);
+                }
+                else {
+                    sLoader.fadeOut();
+                    $('#message-warning').html(result.text);
+                    $('#message-warning').fadeIn();
+                    console.log(result.text);
+                }
             }, (error) => {
                 sLoader.fadeOut();
-                $('#message-warning').html("Something went wrong. Please try again.");
+                $('#message-warning').html("Algo ha ido mal, inténtalo de nuevo.");
                 $('#message-warning').fadeIn();
                 console.log(error.text);
 
