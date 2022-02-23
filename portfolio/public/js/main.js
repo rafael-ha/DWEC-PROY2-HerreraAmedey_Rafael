@@ -1,5 +1,3 @@
-
-
 (function($) {
 
 	"use strict"; 
@@ -21,19 +19,4 @@
 		nav.slideToggle();
 
 	});
-
-	jQuery(window).scroll(function() {
-
-		if (!( $("#header-search").hasClass('is-visible'))) {
-
-			if (jQuery(window).scrollTop() >= pxShow) {
-				jQuery("#go-top").fadeIn(fadeInTime);
-			} else {
-				jQuery("#go-top").fadeOut(fadeOutTime);
-			}
-
-		}		
-
-	});		
-
 })(jQuery);
