@@ -7,6 +7,8 @@ import Academics from './componentes/academics/academics';
 import Contacto from './componentes/contacto/contacto';
 import Utility from './componentes/utility/utility.js';
 
+
+
 function App() {
   return (
     <div className="App">

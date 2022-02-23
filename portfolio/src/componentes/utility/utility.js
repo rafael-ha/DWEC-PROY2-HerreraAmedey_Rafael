@@ -1,7 +1,7 @@
 import React from "react";
 import Crud from "./CRUD/Crud";
 
-const utility = () =>{
+const Utility = () =>{
     return(
     <section id="portfolio">
             <div className="row section-intro">
@@ -16,4 +16,4 @@ const utility = () =>{
     )
 }
 
-export default utility;
+export default Utility;

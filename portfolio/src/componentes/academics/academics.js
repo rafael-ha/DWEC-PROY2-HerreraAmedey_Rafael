@@ -1,6 +1,6 @@
 import React from 'react';
 
-const academics = () => {
+const Academics = () => {
     return (
         <section id="resume" className="grey-section">
             <div className="row section-intro">
@@ -127,4 +127,4 @@ const academics = () => {
 }
 
 
-export default academics;
+export default Academics;

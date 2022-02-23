@@ -1,6 +1,6 @@
 import React from "react";
 
-const info = () => {
+const Info = () => {
     return (
         <section id="intro">
             <div className="intro-overlay"></div>
@@ -38,4 +38,4 @@ const info = () => {
         </section>
     )
 }
-export default info;
+export default Info;

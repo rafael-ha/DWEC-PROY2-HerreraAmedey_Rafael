@@ -1,17 +1,40 @@
-import React, { useRef }from "react";
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import $ from 'jquery'
 
 const Contacto = () => {
+
     const form = useRef();
-    const sendEmail = (e) =>{
+    const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_5tng87g', 'template_pngcg0e', form.current, 'user_iSQ9Nwz2r4GQ3fCAHli4Z')
-              .then((result) => {
-                  console.log(result.text);
-              }, (error) => {
-                  console.log(error.text);
-              });
-    }
+        const sLoader = $('#submit-loader');
+        const data = {
+            service_id: 'service_5tng87g',
+            template_id: 'template_pngcg0e',
+            user_id: 'user_iSQ9Nwz2r4GQ3fCAHli4Z',
+        };
+        fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((result) => {
+                sLoader.fadeIn();
+                sLoader.fadeOut();
+                $('#message-warning').hide();
+                $('#contactForm').fadeOut();
+                $('#message-success').fadeIn();
+                console.log(result.text);
+            }, (error) => {
+                sLoader.fadeOut();
+                $('#message-warning').html("Something went wrong. Please try again.");
+                $('#message-warning').fadeIn();
+                console.log(error.text);
+
+            });
+    };
 
     return (
         <section id="contact">
