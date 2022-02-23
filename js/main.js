@@ -10,17 +10,6 @@
       });       
 
   	})
-
-
-  	/*---------------------------------------------------- */
-  	/* FitText Settings
-  	------------------------------------------------------ */
-  	setTimeout(function() {
-
-   	$('#intro h1').fitText(1, { minFontSize: '42px', maxFontSize: '84px' });
-
-  	}, 100);
-
    let toggleButton = $('.menu-toggle'),
        nav = $('.main-navigation');
 
@@ -33,11 +22,6 @@
 
 	});
 
-  	  
-
-	var pxShow = 300; 
-	var fadeInTime = 400; 
-	var fadeOutTime = 400; 
 	jQuery(window).scroll(function() {
 
 		if (!( $("#header-search").hasClass('is-visible'))) {
