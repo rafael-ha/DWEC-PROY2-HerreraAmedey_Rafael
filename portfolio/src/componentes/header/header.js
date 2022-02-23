@@ -1,18 +1,22 @@
-import React from 'react';
+import React from "react";
+import { smoothscroll } from "../../smoothscrolling";
 
-const header = () => {
+const Header = () => {
+
+    smoothscroll();
+
     return (
         <header>
             <div className="row">
                 <div className="top-bar">
-                    <a className="menu-toggle">
-                        <span>Menu</span>
+                    <a className="menu-toggle" href="#">
+                        <span> Menu </span>
                     </a>
                     <nav id="main-nav-wrap">
                         <ul className="main-navigation">
                             <li className="current">
                                 <a className="smoothscroll" href="#intro" title="">
-                                    Home
+                                    Inicio
                                 </a>
                             </li>
                             <li>
@@ -21,30 +25,30 @@ const header = () => {
                                 </a>
                             </li>
                             <li>
-                                <a className="smoothscroll" href="#academics" title="">
-                                    Academics
-                                </a>
-                            </li>
-                            <li>
                                 <a className="smoothscroll" href="#portfolio" title="">
                                     Portfolio
                                 </a>
                             </li>
                             <li>
-                                <a className="smoothscroll" href="#services" title="">
-                                    Services
+                                <a className="smoothscroll" href="#resume" title="">
+                                    Academics
+                                </a>
+                            </li>
+                            <li>
+                                <a className="smoothscroll" href="#utility" title="">
+                                    Utility
                                 </a>
                             </li>
                             <li>
                                 <a className="smoothscroll" href="#contact" title="">
-                                    Contact
+                                    Contacto
                                 </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </header >
-    )
-}
-export default header;
+        </header>
+    );
+};
+export default Header;
