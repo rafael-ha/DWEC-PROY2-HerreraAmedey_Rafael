@@ -5,7 +5,7 @@
 
 body, html{
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 .crud{
@@ -67,12 +67,16 @@ body, html{
 }
 
 .crud-clear{
-  width: 100%;
-  padding: 0.5rem;
-  background: white;
-  font-size: 1.2rem;
-  border: 1px solid grey;
-  border-radius: 3px;
+  font-size: 1.5rem;
+	display: block;
+	letter-spacing: .2rem;
+	height: 6.6rem;
+	line-height: 6.6rem;
+	padding: 0 3rem;
+	margin-top: 4.8rem;
+	width: 100%;
+	background: #e68b00;
+	color: #FFFFFF;
 }
 .mostrar{
   display:none;
