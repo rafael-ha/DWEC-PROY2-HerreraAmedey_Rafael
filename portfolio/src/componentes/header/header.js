@@ -5,14 +5,14 @@ import $ from 'jquery';
 const Header = () => {
     smoothscroll();
 
-    const [isClicked,setClicked] = useState(false);
+    const [isClicked, setClicked] = useState(false);
     const nav = $(".main-navigation");
 
-    const toggleButton = (e) =>{
+    const toggleButton = (e) => {
         e.preventDefault();
         setClicked(!setClicked);
         nav.slideToggle();
-        
+
     };
     const togglenav = () => {
         setClicked(isClicked);
@@ -23,7 +23,7 @@ const Header = () => {
         <header>
             <div className="row">
                 <div className="top-bar">
-                    <a className={`menu-toggle${isClicked ? ".is-clicked":""}`} onClick={toggleButton} href="#">
+                    <a className={`menu-toggle${isClicked ? ".is-clicked" : ""}`} onClick={toggleButton} href="#">
                         <span> Menu </span>
                     </a>
                     <nav id="main-nav-wrap">

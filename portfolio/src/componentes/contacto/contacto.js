@@ -27,17 +27,16 @@ const Contacto = () => {
                     $('#message-warning').hide();
                     $('#contactForm').fadeOut();
                     $('#message-success').fadeIn();
-                    console.log(result.text);
                 }
+                // There was an error
                 else {
                     sLoader.fadeOut();
                     $('#message-warning').html(result.text);
                     $('#message-warning').fadeIn();
-                    console.log(result.text);
                 }
             }, (error) => {
                 sLoader.fadeOut();
-                $('#message-warning').html("Algo ha ido mal, inténtalo de nuevo.");
+                $('#message-warning').html("Algo fue mal, intentalo de nuevo más tarde.");
                 $('#message-warning').fadeIn();
                 console.log(error.text);
 
