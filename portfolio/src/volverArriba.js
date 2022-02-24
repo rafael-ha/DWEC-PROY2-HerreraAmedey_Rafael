@@ -1,4 +1,6 @@
 import $ from 'jquery';
+
+// Utilidad de boton para hacer scroll al principio de la pagina.
 export const volverArriba = () =>{
     const pxShow = 300;
     const fadeInTime = 400;

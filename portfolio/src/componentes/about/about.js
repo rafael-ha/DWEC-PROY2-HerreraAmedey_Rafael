@@ -14,7 +14,7 @@ const About = () =>{
             <div className="row about-content">
                 <div className="col-six tab-full">
                     <h3>Perfil</h3>
-                    <p>Mas Informacion</p>
+                    <p>Mas informacion</p>
 
                     <ul className="info-list">
                         <li>

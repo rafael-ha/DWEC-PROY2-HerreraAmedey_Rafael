@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 const Header = () => {
     smoothscroll();
-
+    
     const [isClicked, setClicked] = useState(false);
     const nav = $(".main-navigation");
 
